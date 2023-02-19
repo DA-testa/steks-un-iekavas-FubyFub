@@ -1,3 +1,4 @@
+#Andrejs Vasiljevs 221RDB441 12 grupa
 from collections import namedtuple
 
 Bracket = namedtuple("Bracket", ["char", "position"])
@@ -23,14 +24,24 @@ def find_mismatch(text):
                 return i + 1
     if opening_brackets_stack:
         return opening_brackets_stack[0].position
-    return  "Success"
+    
 
 
 def main():
     text = input()
+    
+    if "I" in text:
+        text = input()
+    elif "F" in text:
+        path = input()
+        with open( path ) as f:
+            text = f.read()
     mismatch = find_mismatch(text)
-    print( mismatch )
-
+    
+    if not mismatch :
+        print ( "Success" )
+    else:
+        print ( mismatch )
 
 if __name__ == "__main__":
     main()
