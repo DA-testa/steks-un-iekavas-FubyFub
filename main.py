@@ -27,7 +27,7 @@ def find_mismatch(text):
 
 
 def main():
-    text = input().strip()[5:]
+    text = input()
     mismatch = find_mismatch(text)
     print( mismatch )
 
