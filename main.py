@@ -10,15 +10,16 @@ def are_matching(left, right):
 def find_mismatch(text):
     opening_brackets_stack = []
     for i, next in enumerate(text):
-        if next in "([{":
-            opening_brackets_stack.append( Bracket( next, i + 1 ))
-            pass
+        if i>=5
+            if next in "([{":
+                opening_brackets_stack.append( Bracket( next, i + 1 ))
+                pass
 
-        if next in ")]}":
-            if not opening_brackets_stack:
-                return i + 1
-            pass
-            high = opening_brackets_stack.pop()
+            if next in ")]}":
+                if not opening_brackets_stack:
+                 return i + 1
+                pass
+                high = opening_brackets_stack.pop()
             if not are_matching( high.char, next ):
                 return i + 1
     if opening_brackets_stack:
